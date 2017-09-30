@@ -1,7 +1,19 @@
 =e($element)
   &__#{$element}
-    @content;
+    @content
 
 =m($modifier)
   &--#{$modifier}
-    @content;
+    @content
+
+=media-sm
+  @media (min-width: 530px)
+    @content
+
+=media-md
+  @media (min-width: 800px)
+    @content
+
+=media-lg
+  @media (min-width: 1200px)
+    @content

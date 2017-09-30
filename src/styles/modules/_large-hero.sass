@@ -1,0 +1,42 @@
+$description-color: #fff
+$description-text-shadow: rgba(0, 0, 0, .1)
+
+%text
+  color: $color-main-blue
+  font-weight: 300
+  margin: 0
+
+.large-hero
+  position: relative
+
+  +e('description')
+    color: $description-color
+    font-size: 1.875rem
+    font-weight: 100
+    margin: 2rem auto
+    max-width: 30rem
+    text-shadow: 2px 2px 0 $description-text-shadow
+
+  +e('text-content')
+    left: 0
+    position: absolute
+    text-align: center
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+
+  +e('title')
+    @extend %text
+    font-size: 1.1rem
+    +media-sm
+      font-size: 2rem
+    +media-md
+      font-size: 3.2rem
+    +media-lg
+      font-size: 4.8rem
+
+  +e('subtitle')
+    @extend %text
+    font-size: 1.1rem
+    +media-sm
+      font-size: 2.9rem

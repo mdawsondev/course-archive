@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles/main.css">
   <title>Clear View Escapes</title>
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
@@ -10,7 +11,7 @@
 <body>
   <header>
     <img src="img/icons/clear-view-escapes.svg">
-    <a href="#">Get in Touch</a>
+    <a class="btn" href="#">Get in Touch</a>
     <nav>
       <ul>
         <li><a href="#our-beginning">Our Beginning</a></li>
@@ -21,11 +22,18 @@
   </header>
 
   <div class="large-hero">
-    <img src="img/hero--large.jpg">
-    <h1>Your clarity.</h1>
-    <h2>One trip away.</h2>
-    <p>We create soul restoring journeys that inspire you to be you.</p>
-    <p><a href="#">Get Started Today</a></p>
+    <picture>
+      <source media="(min-width: 1380px)" srcset="img/hero--large.jpg 1920w, img/hero--large-hi-dpi.jpg 3840w">
+      <source media="(min-width: 990px)" srcset="img/hero--medium.jpg 1380w, img/hero--medium-hi-dpi.jpg 2760w">
+      <source media="(min-width: 640px)" srcset="img/hero--small.jpg 990w, img/hero--small-hi-dpi.jpg 1980w">
+      <img srcset="img/hero--smaller.jpg 640w, img/hero--smaller-hi-dpi.jpg 1280w" alt="Coastal view of ocean and mountains. w">
+    </picture>
+    <div class="large-hero__text-content">
+      <h1 class="large-hero__title">Your clarity.</h1>
+      <h2 class="large-hero__subtitle">One trip away.</h2>
+      <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
+      <p><a class="btn btn--orange btn--lg" href="#">Get Started Today</a></p>
+    </div>
   </div>
 
   <div id="our-beginning">
@@ -81,7 +89,7 @@
   </div>
 
   <footer>
-    <p>Copyright &copy; 2016 Clear View Escapes. All rights reserved. <a href="#">Get in Touch</a></p>
+    <p>Copyright &copy; 2016 Clear View Escapes. All rights reserved. <a class="btn btn--orange" href="#">Get in Touch</a></p>
   </footer>
 </body>
 </html>

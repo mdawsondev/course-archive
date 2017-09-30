@@ -1,5 +1,5 @@
 {
-  "name": "Project",
+  "name": "travel-site",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Matt Dawson <mdawsondev@gmail.com>",
@@ -14,5 +14,8 @@
     "gulp-postcss": "^7.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
   }
 }

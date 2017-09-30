@@ -74,6 +74,10 @@ gulp.task('minify-js', function() {
 gulp.task('sass', function() {
   return gulp.src('src/**/*.sass')
   .pipe(sass())
+  .on('error', function(errorInfo) {
+    console.log(errorInfo.toString());
+    this.emit('end');
+  })
   .pipe(gulp.dest('./src/'))
   .pipe(browserSync.stream());
 });
