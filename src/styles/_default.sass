@@ -17,3 +17,9 @@
 =media-lg
   @media (min-width: 1200px)
     @content
+
+=clearfix
+  &::after
+    clear: both
+    content: ''
+    display: table

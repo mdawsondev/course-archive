@@ -7,18 +7,15 @@ $description-text-shadow: rgba(0, 0, 0, .1)
   margin: 0
 
 .large-hero
-  border-bottom: 10px solid $color-main-blue
-  position: relative
-
   +e('description')
+    +media-sm
+      font-size: 1.875rem
     color: $description-color
     font-size: 1.1rem
     font-weight: 100
     margin: 2rem auto
     max-width: 30rem
     text-shadow: 2px 2px 0 $description-text-shadow
-    +media-sm
-      font-size: 1.875rem
 
   +e('image')
     display: block
@@ -33,12 +30,15 @@ $description-text-shadow: rgba(0, 0, 0, .1)
 
   +e('title')
     @extend %text
-    font-size: 2.4rem
     +media-sm
       font-size: 4.8rem
+    font-size: 2.4rem
 
   +e('subtitle')
     @extend %text
-    font-size: 1.5rem
     +media-sm
       font-size: 2.9rem
+    font-size: 1.5rem
+
+  border-bottom: 10px solid $color-main-blue
+  position: relative

@@ -389,6 +389,9 @@ template {
 [hidden] {
   display: none; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   color: #333;
   font-family: 'Roboto', 'sans-serif'; }
@@ -410,6 +413,33 @@ img {
         font-size: 1.25rem; } }
   .btn--orange {
     background-color: #d59541; }
+
+.headline {
+  color: #2f5572;
+  font-size: 1.9rem;
+  font-weight: 300; }
+  .headline--b-margin-small {
+    margin-bottom: .5em; }
+  .headline--b-margin-large {
+    margin-bottom: 1.6em; }
+  .headline--centered {
+    text-align: center; }
+  .headline--light {
+    font-weight: 100; }
+  .headline--narrow {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px; }
+  .headline--orange {
+    color: #d59541; }
+  .headline--small {
+    font-size: 1.2rem; }
+    @media (min-width: 530px) {
+      .headline--small {
+        font-size: 1.875rem; } }
+  @media (min-width: 530px) {
+    .headline {
+      font-size: 2.875rem; } }
 
 .large-hero__title, .large-hero__subtitle {
   color: #2f5572;
@@ -450,12 +480,50 @@ img {
         font-size: 2.9rem; } }
 
 .page-section {
-  padding: 4.5rem 0; }
+  padding: 1.2rem 0; }
+  @media (min-width: 800px) {
+    .page-section {
+      padding: 4.5rem 0; } }
   .page-section--blue {
     background-color: #2f5572;
     color: #fff; }
 
+.row::after {
+  clear: both;
+  content: '';
+  display: table; }
+
+@media (min-width: 800px) {
+  .row__md-4 {
+    float: left;
+    width: 33.33%; }
+    .row__md-4--larger {
+      width: 37%; }
+  .row__md-8 {
+    float: left;
+    width: 66.66%; }
+    .row__md-8--smaller {
+      width: 63%; } }
+
+.row--gutters {
+  margin-right: -65px; }
+  .row--gutters > div {
+    padding-right: 65px; }
+
 .wrapper {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 18px; }
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1236px;
+  overflow: hidden;
+  padding-left: 18px;
+  padding-right: 18px; }
+  .wrapper--b-margin {
+    margin-bottom: 1rem; }
+    @media (min-width: 530px) {
+      .wrapper--b-margin {
+        margin-bottom: 3.8rem; } }
+  .wrapper--medium {
+    max-width: 976px; }
+  .wrapper .wrapper {
+    padding-left: 0;
+    padding-right: 0; }

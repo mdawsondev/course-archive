@@ -1,0 +1,32 @@
+.headline
+  +m('b-margin-small')
+    margin-bottom: .5em
+
+  +m('b-margin-large')
+    margin-bottom: 1.6em
+
+  +m('centered')
+    text-align: center
+
+  +m('light')
+    font-weight: 100
+
+  +m('narrow')
+    margin-left: auto
+    margin-right: auto
+    max-width: 500px
+
+  +m('orange')
+    color: $color-main-orange
+
+  +m('small')
+    +media-sm
+      font-size: 1.875rem
+    font-size: 1.2rem
+
+  +media-sm
+    font-size: 2.875rem
+
+  color: $color-main-blue
+  font-size: 1.9rem
+  font-weight: 300
