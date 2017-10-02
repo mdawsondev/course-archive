@@ -2,12 +2,22 @@
 
   +clearfix
 
+  +e(b-margin-until-medium)
+    margin-bottom: 1rem
+
   +media-md
+    +e(b-margin-until-medium)
+      margin-bottom: 0
+
     +e('md-4')
       +m(larger)
         width: 37%
       float: left
       width: 33.33%
+
+    +e('md-6')
+      float: left
+      width: 50%
 
     +e('md-8')
       +m('smaller')
@@ -20,3 +30,9 @@
 
     > div
       padding-right: 65px
+
+  +m('gutters-lg')
+    margin-right: -100px
+
+    > div
+      padding-right: 100px

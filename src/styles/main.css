@@ -392,6 +392,9 @@ template {
 * {
   box-sizing: border-box; }
 
+a {
+  color: #d59541; }
+
 body {
   color: #333;
   font-family: 'Roboto', 'sans-serif'; }
@@ -414,6 +417,43 @@ img {
   .btn--orange {
     background-color: #d59541; }
 
+.feature-item {
+  padding-bottom: 2.5rem;
+  position: relative; }
+  .feature-item__icon {
+    display: block;
+    margin: 0 auto; }
+    @media (min-width: 800px) {
+      .feature-item__icon {
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute; } }
+  .feature-item__title {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: .8rem;
+    text-align: center; }
+    @media (min-width: 530px) {
+      .feature-item__title {
+        font-size: 1.875rem;
+        text-align: left;
+        margin-top: .7em; } }
+  @media (min-width: 800px) {
+    .feature-item {
+      padding-left: 94px; } }
+
+.generic-content-container p {
+  font-weight: 300;
+  line-height: 1.65;
+  margin: 0 0 1.8rem; }
+  @media (min-width: 530px) {
+    .generic-content-container p {
+      font-size: 1.125rem; } }
+
+p a {
+  font-weight: 700; }
+
 .headline {
   color: #2f5572;
   font-size: 1.9rem;
@@ -430,6 +470,8 @@ img {
     margin-left: auto;
     margin-right: auto;
     max-width: 500px; }
+  .headline--no-t-margin {
+    margin-top: 0; }
   .headline--orange {
     color: #d59541; }
   .headline--small {
@@ -493,12 +535,20 @@ img {
   content: '';
   display: table; }
 
+.row__b-margin-until-medium {
+  margin-bottom: 1rem; }
+
 @media (min-width: 800px) {
+  .row__b-margin-until-medium {
+    margin-bottom: 0; }
   .row__md-4 {
     float: left;
     width: 33.33%; }
     .row__md-4--larger {
       width: 37%; }
+  .row__md-6 {
+    float: left;
+    width: 50%; }
   .row__md-8 {
     float: left;
     width: 66.66%; }
@@ -509,6 +559,32 @@ img {
   margin-right: -65px; }
   .row--gutters > div {
     padding-right: 65px; }
+
+.row--gutters-lg {
+  margin-right: -100px; }
+  .row--gutters-lg > div {
+    padding-right: 100px; }
+
+.section-title {
+  font-size: 2.55rem;
+  font-weight: 300;
+  text-align: center; }
+  @media (min-width: 530px) {
+    .section-title {
+      font-size: 3.75rem; } }
+  .section-title__icon {
+    display: block;
+    margin-bottom: .6rem;
+    margin-left: auto;
+    margin-right: auto; }
+    @media (min-width: 530px) {
+      .section-title__icon {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: .5rem; } }
+  .section-title strong {
+    font-weight: 500; }
 
 .wrapper {
   margin-left: auto;
