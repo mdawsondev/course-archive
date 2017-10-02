@@ -22,11 +22,14 @@ $description-text-shadow: rgba(0, 0, 0, .1)
 
   +e('text-content')
     left: 0
+    padding-top: 88px
     position: absolute
     text-align: center
     top: 50%
     transform: translateY(-50%)
     width: 100%
+    +media-md
+      padding-top: 60px
 
   +e('title')
     @extend %text
