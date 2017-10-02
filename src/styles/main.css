@@ -631,6 +631,20 @@ p a {
   .section-title strong {
     font-weight: 500; }
 
+.site-footer {
+  background: #2f5572;
+  color: #fff;
+  font-weight: 200;
+  padding: 1.5rem 0;
+  text-align: center; }
+  .site-footer__text {
+    display: block;
+    margin-bottom: 1rem; }
+    @media (min-width: 800px) {
+      .site-footer__text {
+        display: inline-block;
+        margin-right: 1.4rem; } }
+
 .icon {
   background-image: url("/img/sprite-69f19c2e.svg"); }
 
