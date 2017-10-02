@@ -1,0 +1,12 @@
+{{#shapes}}
+{{#first}}
+.icon
+  background-image: url('/img/{{{sprite}}}')
+
+{{/first}}
+.icon--{{base}}
+  background-position: {{position.relative.xy}}
+  height: {{height.outer}}px
+  width: {{width.outer}}px
+
+{{/shapes}}
