@@ -5,8 +5,47 @@ var gulp = require('gulp'),
   cleanCSS = require('gulp-clean-css'),
   del = require('del'),
   postcss = require('gulp-postcss'),
+  rename = require('gulp-rename'),
   sass = require('gulp-sass'),
-  sorucemaps = require('gulp-sourcemaps');
+  sorucemaps = require('gulp-sourcemaps'),
+  svgSprite = require('gulp-svg-sprite');
+
+
+gulp.task('sprite', ['sprite:m-svg'], function() {
+  return del(['src/img/sprite'])
+})
+
+gulp.task('sprite:begin', function() {
+  return del(['src/img/sprite*.svg'])
+})
+
+gulp.task('sprite:create', ['sprite:begin'], function() {
+  return gulp.src('src/img/icons/**/*.svg')
+    .pipe(svgSprite({
+      mode: {
+        css: {
+          sprite: 'sprite.svg',
+          render: {
+            sass: {
+              template: './gulp/sprite.sass'
+            }
+          }
+        }
+      }
+    }))
+    .pipe(gulp.dest('src/img/sprite/'));
+});
+
+gulp.task('sprite:m-sass', ['sprite:create'], function() {
+  return gulp.src('src/img/sprite/css/*.sass')
+    .pipe(rename('_sprite.sass'))
+    .pipe(gulp.dest('src/styles/modules/'));
+})
+
+gulp.task('sprite:m-svg', ['sprite:m-sass'], function() {
+  return gulp.src('src/img/sprite/css/*.svg')
+    .pipe(gulp.dest('src/img/'));
+})
 
 gulp.task('autoprefixer', function() {
   return gulp.src('dist/**/*.css')
