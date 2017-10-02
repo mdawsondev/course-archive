@@ -5,6 +5,11 @@
   +e(b-margin-until-medium)
     margin-bottom: 1rem
 
+  +media-lg
+    +e('lg-4')
+      float: left
+      width: 33.33%
+
   +media-md
     +e(b-margin-until-medium)
       margin-bottom: 0
@@ -36,3 +41,24 @@
 
     > div
       padding-right: 100px
+
+  +m('gutters-sm')
+    margin-right: -45px
+
+    > div
+      padding-right: 45px
+
+  +m('t-padding')
+    padding-top: 80px
+
+  +m('equal-height-at-md')
+    +media-md
+      display: flex
+    > div
+      display: flex
+
+  +m('equal-height-at-lg')
+    +media-lg
+      display: flex
+    > div
+      display: flex
