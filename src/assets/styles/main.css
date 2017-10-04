@@ -751,7 +751,7 @@ p a {
     background-color: rgba(47, 85, 114, 0.55); }
 
 .icon {
-  background-image: url("/assets/img/sprite-69f19c2e.svg"); }
+  background-image: url("../../assets/img/sprite-69f19c2e.svg"); }
 
 .icon--clear-view-escapes {
   background-position: 0 0;
