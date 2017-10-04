@@ -4,10 +4,12 @@
   padding: 10px 0
   position: absolute
   width: 100%
+  transition: background-color .3s ease-out
   z-index: 2
   
   +e('button-container')
-    float: right
+    +media-md
+      float: right
 
   +e('logo')
     +media-md
@@ -24,9 +26,23 @@
     transform-origin: 50% 0
 
   +e('menu-content')
-    display: none
+    opacity: 0
+    transform: scale(1.2)
+    transition: all .3s ease-out
+    padding-top: 90px
+    position: relative
+    text-align: center
+    z-index: -10
+    +m('is-visible')
+      opacity: 1
+      z-index: 1
+      transform: scale(1)
     +media-md
+      transform: scale(1)
+      opacity: 1
+      z-index: 1
       display: block
+      padding-top: 0
 
   +e('menu-icon')
     width: 20px
@@ -35,5 +51,9 @@
     position: absolute
     right: 10px
     top: 10px
+    z-index: 10
     +media-md
       display: none
+
+  +m('is-expanded')
+    background-color: rgba($color-main-blue, .55)

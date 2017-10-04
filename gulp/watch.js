@@ -34,7 +34,7 @@ return gulp.src('src/**/*.sass')
 gulp.task('watch', function(){
   gulp.watch('src/**/*.html', ['html']);
   gulp.watch('src/**/*.sass', ['sass']);
-  gulp.watch('src/**/*.js', ['js-reload']);
+  gulp.watch('src/**/!(bundle)*.js', ['js-reload']);
 })
 
-gulp.task('default', ['browserSync', 'html', 'sass', 'js', 'watch']);
+gulp.task('default', ['browserSync', 'html', 'sass', 'js-reload', 'watch']);
