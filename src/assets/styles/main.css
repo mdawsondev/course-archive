@@ -652,6 +652,14 @@ p a {
 .row--equal-height-at-lg > div {
   display: flex; }
 
+.reveal-item {
+  opacity: 0;
+  transition: all 1.5s ease-out;
+  transform: scale(1.15); }
+  .reveal-item--is-visible {
+    opacity: 1;
+    transform: scale(1); }
+
 .section-title {
   font-size: 2.55rem;
   font-weight: 300;
