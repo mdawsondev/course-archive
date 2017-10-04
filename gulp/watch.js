@@ -16,7 +16,7 @@ gulp.task('html', function(){
     .pipe(browserSync.stream());
 });
 
-gulp.task('reload', function() {
+gulp.task('js-reload', ['js'], function() {
   return browserSync.reload();
 })
 
@@ -34,7 +34,7 @@ return gulp.src('src/**/*.sass')
 gulp.task('watch', function(){
   gulp.watch('src/**/*.html', ['html']);
   gulp.watch('src/**/*.sass', ['sass']);
-  gulp.watch('src/**/*.js', ['js', 'reload']);
+  gulp.watch('src/**/*.js', ['js-reload']);
 })
 
 gulp.task('default', ['browserSync', 'html', 'sass', 'js', 'watch']);

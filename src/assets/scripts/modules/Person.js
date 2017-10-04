@@ -1,9 +1,11 @@
-var Person = function(pName, pColor) {
-  this.name = pName;
-  this.color = pColor;
-  this.greet = function() {
-    console.log("I'm " + this.name + ", and I love " + pColor + ".")
+class Person {
+  constructor(fullName, favColor) {
+    this.name = fullName;
+    this.color = favColor;
+  }
+  greet() {
+    console.log("Howdy partner, I'm " + this.name + ", and I love " + this.color + ".")
   }
 }
 
-module.exports = Person;
+export default Person;

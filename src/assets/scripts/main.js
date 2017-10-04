@@ -1,6 +1,10 @@
-var Person = require('./modules/Person');
+import Person from './modules/Person';
 
-var john = new Person("John Smith", "green");
+class Adult extends Person {
+  payTaxes() {
+    console.log('Taxes paid!');
+  }
+}
+
+var john = new Adult("John Smith", "blue");
 john.greet();
-
-console.log("working")
