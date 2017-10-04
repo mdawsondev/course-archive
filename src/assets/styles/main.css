@@ -566,6 +566,8 @@ p a {
         padding: 12px 0;
         font-size: 1rem;
         background-color: transparent; } }
+    .primary-nav a.is-current-link {
+      color: #fabb69; }
 
 .page-section {
   padding: 1.2rem 0; }
@@ -587,7 +589,7 @@ p a {
     background: #e0e6e0; }
     @media (min-width: 1010px) {
       .page-section--testimonials {
-        background: url("/img/testimonials-bg.jpg") top center no-repeat;
+        background: url("/assets/img/testimonials-bg.jpg") top center no-repeat;
         background-size: cover; } }
 
 .row::after {
@@ -707,12 +709,16 @@ p a {
   z-index: 2; }
   @media (min-width: 800px) {
     .site-header {
-      background: rgba(47, 85, 114, 0.3); } }
+      background: rgba(47, 85, 114, 0.3);
+      position: fixed; }
+      .site-header--dark {
+        background-color: rgba(23, 51, 72, 0.85); } }
   @media (min-width: 800px) {
     .site-header__button-container {
       float: right; } }
   .site-header__logo {
     background-color: #2f5572;
+    transition: transform 1s ease-out;
     left: 50%;
     padding: 25px 36px;
     position: absolute;
@@ -722,7 +728,9 @@ p a {
     @media (min-width: 800px) {
       .site-header__logo {
         left: auto;
-        transform: translateX(0); } }
+        transform: translateX(0); }
+        .site-header--dark .site-header__logo {
+          transform: scale(0.57); } }
     .site-header__logo__graphic {
       text-indent: -9999px; }
   .site-header__menu-content {

@@ -1,6 +1,9 @@
 .site-header
   +media-md
-    background: rgba($color-main-blue, .3)    
+    +m('dark')
+      background-color: rgba(23, 51, 72, .85)
+    background: rgba($color-main-blue, .3)
+    position: fixed
   padding: 10px 0
   position: absolute
   width: 100%
@@ -15,9 +18,12 @@
     +media-md
       left: auto
       transform: translateX(0)
+      .site-header--dark &
+        transform: scale(.57)
     +e('graphic')
       text-indent: -9999px
     background-color: $color-main-blue
+    transition: transform 1s ease-out
     left: 50%
     padding: 25px 36px
     position: absolute
