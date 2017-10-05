@@ -525,6 +525,44 @@ p a {
       .large-hero__subtitle {
         font-size: 2.9rem; } }
 
+.modal {
+  opacity: 0;
+  position: fixed;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.94);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(1.5);
+  visibility: hidden;
+  transition: all .3s ease-out; }
+  .modal--is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1); }
+  .modal__description {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.65; }
+  .modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    transform: scaleX(1.2);
+    transform-origin: 100% 0;
+    color: #2f5572; }
+    .modal__close:hover {
+      color: #d59541;
+      cursor: pointer; }
+  .modal__inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%); }
+
 .primary-nav {
   padding-top: 10px; }
   @media (min-width: 800px) {
@@ -666,6 +704,9 @@ p a {
   font-size: 2.55rem;
   font-weight: 300;
   text-align: center; }
+  .section-title--less-margin {
+    margin-bottom: 1.3rem;
+    margin-top: 0; }
   .section-title--blue {
     color: #2f5572; }
   @media (min-width: 530px) {
@@ -801,6 +842,26 @@ p a {
   .site-header--is-expanded {
     background-color: rgba(47, 85, 114, 0.55); }
 
+.social-icons {
+  text-align: center; }
+  .social-icons__icon {
+    position: relative;
+    display: inline-block;
+    margin: 5px 5px 5px;
+    width: 33%;
+    height: 72px;
+    background: #d59541; }
+    @media (min-width: 800px) {
+      .social-icons__icon {
+        width: 72px;
+        margin: 0 5px; } }
+    .social-icons__icon .icon {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
 .icon {
   background-image: url("../../assets/img/sprite-69f19c2e.svg"); }
 
@@ -921,6 +982,8 @@ p a {
         padding-right: 18px; } }
   .wrapper--medium {
     max-width: 976px; }
+  .wrapper--narrow {
+    max-width: 470px; }
   .wrapper .wrapper {
     padding-left: 0;
     padding-right: 0; }
