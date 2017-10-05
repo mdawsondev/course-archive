@@ -4,6 +4,11 @@ import RevealOnScroll from './modules/RevealOnScroll';
 import StickyHeader from './modules/StickyHeader';
 import $ from 'jquery';
 
+import 'lazysizes';
+import 'picturefill';
+import './modernizr';
+
+
 var mobileMenu = new MobileMenu();
 var stickyHeader = new StickyHeader();
 var modal = new Modal();

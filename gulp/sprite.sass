@@ -3,6 +3,9 @@
 .icon
   background-image: url('/assets/img/{{{sprite}}}')
 
+.no-svg .icon
+  background-image: url('/assets/img/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}')
+
 {{/first}}
 .icon--{{base}}
   background-position: {{position.relative.xy}}
