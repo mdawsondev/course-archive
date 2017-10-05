@@ -1,11 +1,24 @@
 var gulp = require('gulp'),
   del = require('del'),
   rename = require('gulp-rename'),
-  svgSprite = require('gulp-svg-sprite');
+  svgSprite = require('gulp-svg-sprite'),
+  svg2png = require('gulp-svg2png');
 
 var config = {
+  shape: {
+    spacing: {
+      padding: 1
+    }
+  },
   mode: {
     css: {
+      variables: {
+        replaceSvgWithPng: function() {
+          return function(sprite, render) {
+            return render(sprite).split('.svg').join('.png');
+          }
+        }
+      },
       sprite: 'sprite.svg',
       render: {
         sass: {
@@ -16,9 +29,15 @@ var config = {
   }
 }
 
-gulp.task('sprite', ['sprite:move-svg'], function() {
+gulp.task('sprite', ['sprite:png'], function() {
   return del(['src/assets/img/sprite'])
-})
+});
+
+gulp.task('sprite:png', ['sprite:move-svg'], function() {
+  return gulp.src('src/assets/img/*.svg')
+    .pipe(svg2png())
+    .pipe(gulp.dest('src/assets/img/'));
+});
 
 gulp.task('sprite:wipe', function() {
   return del(['src/assets/img/sprite*.svg'])
