@@ -3,6 +3,7 @@ var gulp = require('gulp'),
   compiler = require('google-closure-compiler-js').gulp(),
   cleanCSS = require('gulp-clean-css'),
   del = require('del'),
+  imagemin = require('gulp-imagemin'),
   postcss = require('gulp-postcss');
 
 gulp.task('autoprefixer', function() {
@@ -18,8 +19,18 @@ gulp.task('build:clean', function () {
 });
 
 gulp.task('build:copy', ['build:clean'], function(){
-  return gulp.src(['src/**/*'])
+  return gulp.src(['src/**/*', "!src/assets/img/**/*"])
   .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('build:optimize', function() {
+  return gulp.src(['src/assets/img/**/*', '!src/assets/img/icons', '!src/assets/img/icons/**/*'])
+      .pipe(imagemin({
+        profressive: true,
+        interlaced: true,
+        multipass: true
+      }))
+      .pipe(gulp.dest('dist/assets/img'));
 });
 
 gulp.task('build:process', ['build:copy'], function() {
@@ -30,7 +41,8 @@ gulp.task('build:process', ['build:copy'], function() {
 gulp.task('build:remove', ['build:process'], function() {
   del([
     'dist/assets/styles/!(*.css)',
-    'dist/assets/scripts/!(bundle.js)'
+    'dist/assets/scripts/!(bundle.js)',
+    'dist/assets/img/icons'
   ]);
 });
 
