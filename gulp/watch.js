@@ -11,6 +11,14 @@ gulp.task('browserSync', function(){
   });
 });
 
+gulp.task('liveSync', function(){
+  browserSync.init({
+    server: {
+      baseDir: 'docs/'
+    },
+  });
+});
+
 gulp.task('html', function(){
   return gulp.src('src/**/*.html')
     .pipe(browserSync.stream());
