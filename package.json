@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Matt Dawson <mdawsondev@gmail.com>",
-  "license": "MIT",
+  "license": "GNU",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "browser-sync": "^2.18.13",
