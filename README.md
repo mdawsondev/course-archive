@@ -1,5 +1,5 @@
 # Synthatap
-Synthatap is an infant version of a [Patatap](https://patatap.com/) clone! Well, sort of. It was created as part of The Web Developer's Bootcamp course, but will remain as a playground for me to experiment with [Paper.js](https://paperjs.org) and [Howler.js](https://github.com/goldfire/howler.js)
+Synthatap is an infant version of a [Patatap](https://patatap.com/) clone! Well, sort of. It was created as part of The Web Developer's Bootcamp course, but will remain as a playground for me to experiment with the [Paper.js](https://paperjs.org) and [Howler.js](https://github.com/goldfire/howler.js) libraries.
 
 Push keys, hear noises, see shapes.
 
