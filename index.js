@@ -15,7 +15,7 @@ const indexRoutes      = require("./routes/index"),
       campgroundRoutes = require("./routes/campgrounds"),
       commentRoutes    = require("./routes/comments");
 
-mongoose.connect(`mongodb://localhost/yelpcamp`, { useMongoClient: true });
+mongoose.connect(process.env.DATABASEURL, { useMongoClient: true });
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.urlencoded({ extended: true }));
