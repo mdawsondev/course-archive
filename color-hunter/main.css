@@ -1,0 +1,95 @@
+/* Appendix
+
+ - General
+ - Settings
+ - Squares
+ - Special-Hidden
+ - Title */
+
+
+
+/* --------------------
+General
+-------------------- */
+
+body {
+  background: #232323;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+
+
+
+
+
+/* -----------------------
+Settings
+----------------------- */
+.settings {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.settings--stripe {
+  background-color: grey;
+  height: 2rem
+}
+
+.settings--active {
+  background-color: steelblue;
+}
+
+
+
+
+
+/* ---------------------
+Squares
+--------------------- */
+
+.squares {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  margin: 0 auto;
+  width: 37.5rem;
+}
+
+.squares__square {
+  border-radius: 2rem;
+  height: calc(34.5rem/3);
+  margin: .5rem;
+  background: #555;
+}
+
+
+
+
+
+/* --------------------
+Special-Hidden
+-------------------- */
+
+.hidden {
+  opacity: 0;
+}
+
+.trans-all {
+  transition: all .5s ease-out;
+}
+
+.inactive {
+  display: none;
+}
+
+
+
+
+
+/* --------------------
+Title
+-------------------- */
+
+.title {
+  color: #fff;
+}
