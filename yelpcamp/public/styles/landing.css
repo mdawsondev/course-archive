@@ -1,0 +1,10 @@
+.h-mid {
+  text-align: center;
+  position: absolute;
+  transform: translateY(-55%);
+  padding-top: 50%;
+}
+
+.zindex-bottom {
+    z-index: -1000;
+}
