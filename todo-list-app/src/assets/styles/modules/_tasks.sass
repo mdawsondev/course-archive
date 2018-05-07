@@ -1,0 +1,34 @@
+.tasks
+  background: #fff
+  cursor: pointer
+  list-style: none
+  margin: 0
+  padding: 0
+
+.tasks__task
+  color: #777
+  height: 2.5rem
+  line-height: 2.5rem
+
+.tasks__task:nth-child(odd)
+  background: #ddd
+
+.tasks__remove
+  background: #e74c3c
+  color: white
+  display: inline-block
+  height: 2.5rem
+  margin-right: 1.25rem
+  opacity: 0
+  text-align: center
+  transition: .2s linear
+  width: 0
+
+.tasks__task:hover .tasks__remove
+  width: 2.5rem
+  opacity: 1
+
+
+.tasks--complete
+  color: #ccc
+  text-decoration: line-through
